@@ -5,19 +5,16 @@ import by.svyat.rabbitmq.service.MessageSender;
 import by.svyat.rabbitmq.service.RabbitReceiver;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
-
-import java.time.Duration;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.awaitility.Awaitility.await;
 
 public class RabbitSenderTest extends RabbitInitializer {
 
     @Autowired
     private MessageSender messageSender;
 
-    @MockBean
+    @MockitoBean
     private RabbitReceiver rabbitReceiver;
 
     @Test
