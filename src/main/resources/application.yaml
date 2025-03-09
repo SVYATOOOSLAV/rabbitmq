@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    first-queue-name: FirstQueue
+    second-queue-name: SecondQueue
+    host: localhost
+    virtual-host: /
+    port: 5672
+    username: user
+    password: password
+
